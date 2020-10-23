@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Item
 from .serializers.common import ItemSerializer
+from .serializers.populated import PopulatedItemSerializer
 
 class ItemListView(APIView):
     ''' Handles all requests to /items (Get-Index + Post-Create) '''
@@ -13,10 +14,11 @@ class ItemListView(APIView):
 
     def get(self, _request):
         item_list = Item.objects.all()
-        serialized_item_list = ItemSerializer(item_list, many=True)
+        serialized_item_list = PopulatedItemSerializer(item_list, many=True)
         return Response(serialized_item_list.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        request.data['owner'] = request.user.id
         item_to_create = ItemSerializer(data=request.data)
         if item_to_create.is_valid():
             item_to_create.save()
@@ -35,8 +37,8 @@ class ItemDetailView(APIView):
 
     def get(self, _request, pk):
         item = self.get_item(pk=pk)
-        serialized_item = ItemSerializer(item)
-        return  Response(serialized_item.data, status=status.HTTP_200_OK)
+        serialized_item = PopulatedItemSerializer(item)
+        return Response(serialized_item.data, status=status.HTTP_200_OK)
 
     def put(self, request, pk):
         item_to_update = self.get_item(pk=pk)
