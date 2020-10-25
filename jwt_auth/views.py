@@ -26,7 +26,7 @@ class RegisterView(APIView):
 
 class LoginView(APIView):
 
-    def get_user(self,email):
+    def get_user(self, email):
         try:
             return User.objects.get(email=email)
         except User.DoesNotExist:
@@ -56,3 +56,9 @@ class ProfileView(APIView):
         user = User.objects.get(pk=request.user.id)
         serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+class UserListView(APIView):
+    def get(self, _request):
+        user_list = User.objects.all()
+        serialized_user_list = UserSerializer(user_list, many=True)
+        return Response(serialized_user_list.data, status=status.HTTP_200_OK)

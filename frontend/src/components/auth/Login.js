@@ -1,6 +1,9 @@
 import React from 'react'
 import { Form, Button, Container } from 'react-bootstrap'
 
+import { loginUser } from '../../lib/api'
+import { setToken, setUserId } from '../../lib/auth'
+
 class Login extends React.Component {
   state = {
     formData: {
@@ -9,19 +12,52 @@ class Login extends React.Component {
     }
   }
 
+  handleChange = event => {
+    const formData = {
+      ...this.state.formData,
+      [event.target.name]: event.target.value
+    }
+    this.setState({ formData })
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault()
+    try { 
+      const response = await loginUser(this.state.formData)
+      console.log(response)
+      setToken(response.data.token)
+      setUserId(response.data.userID)
+      this.props.history.push('/items')
+    } catch (err) {
+      console.log(err.response)
+      this.setState({ errors: err.response.data.errors })
+    }
+  }
+
   render() {
+    const { email, password } = this.state.formData
     return (
       <Container className="login-form-wrapper">
 
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control 
+              type="email" 
+              placeholder="Email" 
+              name="email"
+              value={email}
+              onChange={this.handleChange}/>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control 
+              type="password" 
+              placeholder="Password"                       
+              name="password"
+              value={password}
+              onChange={this.handleChange} />
           </Form.Group>
         
           <Button variant="primary" type="submit">
