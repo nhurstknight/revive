@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Button, Container } from 'react-bootstrap'
+import { Form, Button, Container, InputGroup } from 'react-bootstrap'
 
 import { loginUser } from '../../lib/api'
 import { setToken, setUserId } from '../../lib/auth'
@@ -42,12 +42,17 @@ class Login extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control 
-              type="email" 
-              placeholder="Email" 
-              name="email"
-              value={email}
-              onChange={this.handleChange}/>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control 
+                type="email" 
+                placeholder="Email" 
+                name="email"
+                value={email}
+                onChange={this.handleChange}/>
+            </InputGroup>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">

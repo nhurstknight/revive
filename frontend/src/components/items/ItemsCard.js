@@ -1,19 +1,23 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Button, Card, Image } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-const ItemsCard = ({ title, description }) =>  {
+const ItemsCard = ({ id, title, image }) =>  {
 
   return (
     <Card className="text-center">
       <Card.Header>Featured</Card.Header>
       <Card.Body>
         <Card.Title>{ title }</Card.Title>
-        <Card.Text>
+        <Image src={ image }></Image>
+        {/* <Card.Text>
           { description }
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        </Card.Text> */}
+        <Link to={`/items/${id}`}>
+          <Button>View Listing</Button>
+        </Link>
       </Card.Body>
-      <Card.Footer className="text-muted">2 days ago</Card.Footer>
+      {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
     </Card>
   )
 }

@@ -21,12 +21,11 @@ class ItemsIndex extends React.Component {
   render() {
     if (!this.state.items) return null
     return (
-      // <div>testing</div>
       <Container>
-        <Row xs={1} xl={3}>
+        <Row >
           {(this.state.items).map(item => (
             <ItemsCard
-              key={item._id}
+              key={item.id}
               {...item} />
           ))}
         </Row>

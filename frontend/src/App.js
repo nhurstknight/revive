@@ -9,9 +9,11 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 
 import ItemsIndex from './components/items/ItemsIndex'
+import ItemsShow from './components/items/ItemsShow'
+import UploadItem from './components/items/UploadItem'
+import Message from './components/items/Message'
 
 class App extends React.Component {
-
 
   render() {
     return (
@@ -19,9 +21,12 @@ class App extends React.Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/items/:id/message" component={Message}/>
+          <Route path="/items/:id" component={ItemsShow}/>
           <Route path="/items" component={ItemsIndex}/>
           <Route path="/register" component={Register}/>
           <Route path="/login" component={Login}/>
+          <Route path="/upload" component={UploadItem}/>
         </Switch>
         <Footer />
       </BrowserRouter>

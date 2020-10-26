@@ -1,17 +1,26 @@
 import axios from 'axios'
 const baseUrl = '/api'
 
-// const withHeaders = () => {
-//   return {
-//     headers: {
-//       Authorization: `Bearer ${localStorage.getItem('token')}`
-//     }
-//   }
-// }
+const withHeaders = () => {
+  return {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+  }
+}
 
 // ITEMS
 export const getAllItems = () => {
-  return axios.get(`${baseUrl}/items`)
+  return axios.get(`${baseUrl}/items/`)
+}
+export const uploadItem = formData => {
+  return axios.post(`${baseUrl}/items/`, formData, withHeaders())
+}
+export const getSingleItem = itemId => {
+  return axios.get(`${baseUrl}/items/${itemId}/`)
+}
+export const sendMessage = (itemId, formData ) => {
+  return axios.post(`${baseUrl}/items/${itemId}/message`, formData, withHeaders())
 }
 
 // AUTH
@@ -21,3 +30,4 @@ export const registerUser = formData => {
 export const loginUser = formData => {
   return axios.post(`${baseUrl}/auth/login/`, formData)
 }
+
