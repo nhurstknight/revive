@@ -1,18 +1,35 @@
 import React from 'react'
-import { Jumbotron, Container } from 'react-bootstrap'
-// import { Link } from 'react-router-dom'
+import { Container, Image, Row, Col, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+
+import reviveLogo from '../../media/revive-logo.gif'
+import search from '../../media/search.gif'
+import message from '../../media/message.gif'
+import collect from '../../media/collect.gif'
 
 const Home = () => {
   return (
-    <Jumbotron fluid>
+    <>
       <Container>
-        <h1>Fluid jumbotron</h1>
-        <p>
-          This is a modified jumbotron that occupies the entire horizontal space of
-          its parent.
-        </p>
+        <Image src={ reviveLogo }></Image>
       </Container>
-    </Jumbotron>
+      <Container> 
+        <Row>
+          <Col xs={6} md={4}>
+            <Image src={ search } thumbnail />
+          </Col>
+          <Col xs={6} md={4}>
+            <Image src={ message } thumbnail />
+          </Col>
+          <Col xs={6} md={4}>
+            <Image src={ collect} thumbnail />
+          </Col>
+        </Row>
+        <Link to="/items">
+          <Button>Browse</Button>
+        </Link>
+      </Container>
+    </>
   )
 }
 
