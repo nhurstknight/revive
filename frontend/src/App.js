@@ -21,9 +21,9 @@ class App extends React.Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/items/:id/message" component={Message}/>
           <Route path="/items/:id" component={ItemsShow}/>
           <Route path="/items" component={ItemsIndex}/>
+          <Route path="/threads/:id" component={Message}/>
           <Route path="/register" component={Register}/>
           <Route path="/login" component={Login}/>
           <Route path="/upload" component={UploadItem}/>

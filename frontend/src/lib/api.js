@@ -19,8 +19,8 @@ export const uploadItem = formData => {
 export const getSingleItem = itemId => {
   return axios.get(`${baseUrl}/items/${itemId}/`)
 }
-export const sendMessage = (itemId, formData ) => {
-  return axios.post(`${baseUrl}/items/${itemId}/message`, formData, withHeaders())
+export const sendMessage = (item, formData) => {
+  return axios.post(`${baseUrl}/threads/`, formData, withHeaders())
 }
 
 // AUTH
