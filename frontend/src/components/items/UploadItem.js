@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container,Form, Button } from 'react-bootstrap'
-
+import ImageUpload from './ImageUpload'
 import { uploadItem } from '../../lib/api'
 
 class UploadItem extends React.Component {
@@ -37,8 +37,14 @@ class UploadItem extends React.Component {
     }
   }
 
+  handleImageChange = url => {
+    console.log('I have the url', url)
+    const formData = { ...this.state.formData, image: url }
+    this.setState({ formData })
+  }
+
   render() {
-    const { title, description, image } = this.state.formData
+    const { title, description } = this.state.formData
     return (
       <Container className="reg-form-wrapper">
 
@@ -65,17 +71,9 @@ class UploadItem extends React.Component {
             />
           </Form.Group>
 
-          {/* change to image upload form */}
-          <Form.Group controlId="formImage">
-            <Form.Label>Image(s)</Form.Label>
-            <Form.Control 
-              type="file" 
-              name="image"
-              placeholder="Enter image URL" 
-              value={ image } 
-              onChange={ this.handleChange }
-            />
-          </Form.Group>
+          <ImageUpload 
+            onChange={this.handleImageChange}
+          />
         
           <Button variant="primary" type="submit">
             Submit
