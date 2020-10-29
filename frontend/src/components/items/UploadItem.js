@@ -46,7 +46,7 @@ class UploadItem extends React.Component {
   render() {
     const { title, description } = this.state.formData
     return (
-      <Container className="reg-form-wrapper">
+      <Container className="upload-form-wrapper">
 
         <Form onSubmit={ this.handleSubmit }>
           <Form.Group controlId="formTitle">
@@ -75,7 +75,7 @@ class UploadItem extends React.Component {
             onChange={this.handleImageChange}
           />
         
-          <Button variant="primary" type="submit">
+          <Button className="upload-btn" variant="primary" type="submit">
             Submit
           </Button>
         </Form>

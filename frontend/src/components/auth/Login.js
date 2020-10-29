@@ -39,6 +39,8 @@ class Login extends React.Component {
     return (
       <Container className="login-form-wrapper">
 
+        <h2>Login!</h2>
+
         <Form onSubmit={this.handleSubmit}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

@@ -1,16 +1,64 @@
+$theme-color1: #377D30;
+$theme-color2: #BFD9C1;
+$theme-color3: #FEF851;
+$theme-color4: #F5F5F5;
+$theme-colors: (
+    "primary": #FEF851,
+);
+
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+
+* {
+  font-family: 'Jost', sans-serif;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+  font-weight: 700px;
+}
 
 // common
+.navbar-brand {
+  font-family: 'Staatliches', cursive;
+}
+
+.navbar.navbar.navbar-expand-lg {
+  background-color: $theme-color1;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: $theme-color4;
+}
+
+.home-hero {
+  background-color: $theme-color2;
+  height: 100vh;
+}
+
+.about {
+  background-color: $theme-color4;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
 
 .footer {
+  background-color: $theme-color1;
   height: 20vh,;
-  color:rgba(0, 0, 0, 0.5);
-  // font-weight: 700;
+  font-weight: 400;
   text-align: center;
   position: relative;
 }
 
 .footer ul {
+  color: $theme-color4;
   list-style-type: none;
   padding: 0;
   text-align: center;
@@ -24,12 +72,87 @@
   
 }
 
-.reg-form-wrapper,
-.login-form-wrapper {
-
+form {
+  margin-top: 30px;
 }
 
-.img-thumbnail {
-  width: 200px;
-  height: 200px;
+.reg-form-wrapper,
+.login-form-wrapper,
+.upload-form-wrapper,
+.message-form {
+  margin: 50px auto;
+  width: 50%;
+  padding: 40px;
+  background-color: $theme-color1;
+  border-radius: 10px;
+}
+
+.form-label {
+  color: #fff;
+}
+
+.upload-thumbnail {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+.upload-btn.btn.btn-primary {
+  display: block;
+  margin-top: 20px;
+}
+
+.itemcard-wrapper {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.itemcard {
+  text-align: center;
+  margin: 8px;
+  box-sizing: content-box;
+}
+
+.itemcard-btn {
+  // margin: 10px 0;
+  border-radius: 0;
+}
+
+.card-header {
+  color: $theme-color4;
+  background-color: $theme-color1;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.card-footer {
+  background-color: $theme-color1;
+  color: #fff;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0
+}
+
+.itemcard-img {
+  box-sizing: border-box;
+  margin: auto;
+  // box-sizing: content-box;
+}
+
+.indexshow {
+  display: flex;
+  height: 100vh;
+  margin: 50px auto;
+  
+}
+
+.indexshow-img {
+  height: 50vh;
+  margin: 40px;
+  width: auto;
+
 }

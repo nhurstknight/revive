@@ -21,7 +21,7 @@ class ItemsIndex extends React.Component {
   render() {
     if (!this.state.items) return null
     return (
-      <Container>
+      <Container className="itemcard-wrapper" fluid>
         <Row >
           {(this.state.items).map(item => (
             <ItemsCard

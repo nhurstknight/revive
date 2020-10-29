@@ -1,13 +1,12 @@
 import React from 'react'
-import { Button, Container, Image, Col } from 'react-bootstrap'
+import { Button, Container, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
 import { getSingleItem, sendMessage } from '../../lib/api'
 
 class ItemsShow extends React.Component {
 
   state = {
-    item: null,
+    item: '',
     formData: {
       id: '',
       message: ''
@@ -50,30 +49,24 @@ class ItemsShow extends React.Component {
 
 
   render() {
-    if (!this.state.item) return null
+    const { title, image, description, id } = this.state.item
+    // const { username } = this.state.item.owner
+    if (!this.state.item && !this.state.item.owner) return null
     return ( 
       <>
-        <Container fluid>
-          <h1>Shop with us</h1>
-        </Container>
-        <Container>
-          <Col xs={1} m={6}>
-            <Image className="beans-show-img" src={ this.state.item.image }/>
-          </Col>
-          <Col xl={6}>
-            <div className="beans-show-info">
-              <div className="beans-show-title">
-                <h2>{ this.state.item.title }</h2>
-              </div>
-              <div className="beans-show-subtitle">
-                <h4>{ this.state.item.description }</h4>
-              </div>
-            </div>
-            <Link to={`/threads/${this.state.item.id}`}>
+        <Container className="indexshow">
+          <Image className="indexshow-img" src={ image }/>
+          <Container>
+            <h2>{ title }</h2>
+            <h4>{`User: ${ this.state.item.owner.username }`}</h4>
+            <p>{ description }</p>
+            <h2>Interested in this item?</h2>
+            <Link to={`/threads/${id}`}>
               <Button>Enquire</Button>
             </Link>
-          </Col>
+          </Container>
         </Container>
+
       </>
     )
   }

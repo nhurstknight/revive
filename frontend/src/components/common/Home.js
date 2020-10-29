@@ -3,25 +3,25 @@ import { Container, Image, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import reviveLogo from '../../media/revive-logo.gif'
-import search from '../../media/search.gif'
-import message from '../../media/message.gif'
-import collect from '../../media/collect.gif'
+import search from '../../media/search.png'
+import message from '../../media/message.png'
+import collect from '../../media/collect.png'
 
 const Home = () => {
   return (
     <>
-      <Container>
+      <Container fluid className="home-hero">
         <Image src={ reviveLogo }></Image>
       </Container>
-      <Container> 
+      <Container fluid className="about"> 
         <Row>
-          <Col xs={6} md={4}>
+          <Col >
             <Image src={ search } thumbnail />
           </Col>
-          <Col xs={6} md={4}>
+          <Col >
             <Image src={ message } thumbnail />
           </Col>
-          <Col xs={6} md={4}>
+          <Col >
             <Image src={ collect} thumbnail />
           </Col>
         </Row>

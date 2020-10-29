@@ -1,9 +1,11 @@
 import React from 'react'
-import { Button, Container, Form } from 'react-bootstrap'
+import { Button, Container, Form, Image } from 'react-bootstrap'
 import { sendMessage, getSingleItem } from '../../lib/api'
 
 class Message extends React.Component {
   state = {
+    item: '',
+    user: '',
     formData: {
       item: '',
       message: ''
@@ -14,7 +16,10 @@ class Message extends React.Component {
     const item = this.props.match.params.id
     console.log('this.props.match.params --->', this.props.match.params)
     const response = await getSingleItem(item)
+    console.log(response)
     this.setState({
+      item: response.data,
+      user: response.data.owner,
       formData: {
         item: response.data.id
       }
@@ -28,7 +33,6 @@ class Message extends React.Component {
       [event.target.name]: event.target.value
     }
     this.setState({ formData })
-    // console.log(formData)
   }
 
   handleSubmit = async event => {
@@ -46,23 +50,30 @@ class Message extends React.Component {
   }
 
   render() {
-    // const { message } = this.props
+    const { message } = this.state.formData
+    const { image, title } = this.state.item
+    const { username } = this.state.user
+    if (!this.state.item && !this.state.formData && !this.state.item.owner) 
+      return null
     return (
-      <Container>
+      <Container className="message-form">
+        <h2>Send a message</h2>
+        <h5>{ title }</h5>
+        <p>{ username }</p>
+        <Image className="upload-thumbnail" src={ image }/>
         <Form onSubmit={ this.handleSubmit }>
           <Form.Group controlId="formMessage">
             <Form.Label>Message</Form.Label>
-            <Form.Control 
+            <Form.Control
               as="textarea" rows={8}
               type="message" 
               name="message" 
               placeholder="Enter message to the post owner" 
-              value={ this.state.formData.message } 
+              value={ message } 
               onChange={ this.handleChange }
             />
           </Form.Group>
           <Button 
-            // item={this.state.formData.item}
             variant="primary" 
             type="submit" >
             Submit

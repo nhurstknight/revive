@@ -1,23 +1,23 @@
+/* eslint-disable camelcase */
 import React from 'react'
 import { Button, Card, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+// eslint-disable-next-line camelcase
 const ItemsCard = ({ id, title, image }) =>  {
 
   return (
-    <Card className="text-center">
-      <Card.Header>Featured</Card.Header>
+    <Card className="itemcard">
+      <Card.Header>{ title }</Card.Header>
       <Card.Body>
-        <Card.Title>{ title }</Card.Title>
-        <Image src={ image }></Image>
-        {/* <Card.Text>
-          { description }
-        </Card.Text> */}
-        <Link to={`/items/${id}`}>
-          <Button>View Listing</Button>
+        <Image className="itemcard-img" src={ image }></Image>
+        <Link to={`/items/${ id }`}>
+          <Button block className="itemcard-btn">View Listing</Button>
         </Link>
       </Card.Body>
-      {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
+      {/* <Card.Footer>
+        <p>{created_at}</p>
+      </Card.Footer> */}
     </Card>
   )
 }

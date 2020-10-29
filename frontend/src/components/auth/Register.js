@@ -46,6 +46,8 @@ class Register extends React.Component {
     return (
       <Container className="reg-form-wrapper">
 
+        <h2>Sign up!</h2>
+
         <Form onSubmit={ this.handleSubmit }>
           <Form.Group controlId="formFirstName">
             <Form.Label>First name</Form.Label>

@@ -41,7 +41,7 @@ class ImageUpload extends React.Component {
       <>
         {image ? 
           <img src={image}
-            className="img-thumbnail"
+            className="upload-thumbnail"
           />
           :
           <Form.Group controlId="formImage">

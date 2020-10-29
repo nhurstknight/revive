@@ -15,24 +15,25 @@ const NavBar = () => {
   }
 
   return (
-    <Navbar bg="dark" variant="dark" className="justify-content-center">
-      <Navbar.Brand href="#home">REVIVE</Navbar.Brand>
-      {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav"> */}
-      <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/items">Items</Nav.Link>
-        <NavDropdown title={user} id="collasible-nav-dropdown">
-          { !isAuthenticated() && <NavDropdown.Item href="/register">Register</NavDropdown.Item> }
-          { !isAuthenticated() && <NavDropdown.Divider /> }
-          { !isAuthenticated() && <NavDropdown.Item href="/login">Login</NavDropdown.Item> }
-          { isAuthenticated() && <NavDropdown.Item href="#action/3.2">My account</NavDropdown.Item> }
-          { isAuthenticated() && <NavDropdown.Divider /> }
-          { isAuthenticated() && <NavDropdown.Item href="/upload">Upload Item</NavDropdown.Item> }
-          { isAuthenticated() && <NavDropdown.Divider /> }
-          { isAuthenticated() && <NavDropdown.Item href="/" onClick={handleLogout}>Logout</NavDropdown.Item> }
-        </NavDropdown>
-      </Nav>
+    <Navbar collapseOnSelect expand="lg"className="navbar">
+      <Navbar.Brand href="/">REVIVE</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/items">Items</Nav.Link>
+          <NavDropdown title={user} id="collasible-nav-dropdown">
+            { !isAuthenticated() && <NavDropdown.Item href="/register">Sign Up</NavDropdown.Item> }
+            { !isAuthenticated() && <NavDropdown.Divider /> }
+            { !isAuthenticated() && <NavDropdown.Item href="/login">Login</NavDropdown.Item> }
+            {/* { isAuthenticated() && <NavDropdown.Item href="#action/3.2">My account</NavDropdown.Item> } */}
+            {/* { isAuthenticated() && <NavDropdown.Divider /> } */}
+            { isAuthenticated() && <NavDropdown.Item href="/upload">Upload Item</NavDropdown.Item> }
+            { isAuthenticated() && <NavDropdown.Divider /> }
+            { isAuthenticated() && <NavDropdown.Item href="/" onClick={handleLogout}>Logout</NavDropdown.Item> }
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   )
 }
