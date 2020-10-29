@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import ItemsCard from './ItemsCard'
 import { getAllItems } from '../../lib/api'
@@ -22,13 +22,16 @@ class ItemsIndex extends React.Component {
     if (!this.state.items) return null
     return (
       <Container className="itemcard-wrapper" fluid>
-        <Row >
-          {(this.state.items).map(item => (
-            <ItemsCard
-              key={item.id}
-              {...item} />
-          ))}
-        </Row>
+        <h1>Latest posts</h1>
+        <Col>
+          <Row >
+            {(this.state.items).map(item => (
+              <ItemsCard
+                key={item.id}
+                {...item} />
+            ))}
+          </Row>
+        </Col>
       </Container>
     )
   }

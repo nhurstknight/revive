@@ -45,7 +45,7 @@ class ImageUpload extends React.Component {
           />
           :
           <Form.Group controlId="formImage">
-            <Form.Label>Image(s)</Form.Label>
+            <Form.Label>Image</Form.Label>
             <Form.Control 
               type="file" 
               name="image"

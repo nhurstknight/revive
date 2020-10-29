@@ -50,20 +50,25 @@ class ItemsShow extends React.Component {
 
   render() {
     const { title, image, description, id } = this.state.item
-    // const { username } = this.state.item.owner
-    if (!this.state.item && !this.state.item.owner) return null
+    if (!this.state.item) return null
     return ( 
       <>
-        <Container className="indexshow">
-          <Image className="indexshow-img" src={ image }/>
-          <Container>
-            <h2>{ title }</h2>
-            <h4>{`User: ${ this.state.item.owner.username }`}</h4>
-            <p>{ description }</p>
-            <h2>Interested in this item?</h2>
-            <Link to={`/threads/${id}`}>
-              <Button>Enquire</Button>
-            </Link>
+        <Container className="itemshow" fluid>
+          <Container className="itemshow-title">
+
+            <h1>{ title }</h1>  
+          </Container>
+          <Container className="itemshow-wrapper">
+            <Image className="itemshow-img" src={ image }/>
+            <Container className="itemshow-info">
+              <h4>{`User: ${ this.state.item.owner.username }`}</h4>
+              <p>{ description }</p>
+              <h4>Interested in this item?</h4>
+              <p>Send { this.state.item.owner.username } a message</p>
+              <Link to={`/threads/${id}`}>
+                <Button>Enquire</Button>
+              </Link>
+            </Container>
           </Container>
         </Container>
 

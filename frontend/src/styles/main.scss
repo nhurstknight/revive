@@ -15,12 +15,16 @@ $theme-colors: (
   font-family: 'Jost', sans-serif;
 }
 
-h2, h3 {
+h1, h2,  h3 {
   text-transform: uppercase;
   font-weight: 700px;
 }
 
-// common
+h2, h3 {
+  color: $theme-color4;
+}
+
+// Common
 .navbar-brand {
   font-family: 'Staatliches', cursive;
 }
@@ -34,24 +38,28 @@ h2, h3 {
   color: $theme-color4;
 }
 
-.home-hero {
-  background-color: $theme-color2;
-  height: 100vh;
-}
-
 .about {
   background-color: $theme-color4;
   height: 100vh;
-  margin: 0 auto;
+  margin-bottom: 0em;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-btn-div .btn{
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 15px auto;
 }
 
 .footer {
   background-color: $theme-color1;
-  height: 20vh,;
+  height: 20vh;
   font-weight: 400;
   text-align: center;
   position: relative;
@@ -68,10 +76,7 @@ h2, h3 {
   transform: translate(-50%, -50%);
 }
 
-.footer a {
-  
-}
-
+//  Forms
 form {
   margin-top: 30px;
 }
@@ -102,28 +107,35 @@ form {
   margin-top: 20px;
 }
 
+// ItemsIndex / ItemsCard
 .itemcard-wrapper {
-  margin: 50px auto;
+  margin: 30px auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 4em;
+  margin-bottom: 30px;
 }
 
 .itemcard {
   text-align: center;
-  margin: 8px;
+  margin: 4px;
   box-sizing: content-box;
 }
 
 .itemcard-btn {
-  // margin: 10px 0;
   border-radius: 0;
 }
 
 .card-header {
   color: $theme-color4;
   background-color: $theme-color1;
-  font-weight: 400;
-  font-size: 1.5em;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.2em;
 }
 
 .card-footer {
@@ -140,19 +152,36 @@ form {
 .itemcard-img {
   box-sizing: border-box;
   margin: auto;
-  // box-sizing: content-box;
 }
 
-.indexshow {
+// ItemsShow
+.itemshow {
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  margin: 50px auto;
-  
 }
 
-.indexshow-img {
-  height: 50vh;
-  margin: 40px;
-  width: auto;
+.itemshow-title {
+  text-align: center;
+  margin: 20px auto;
+}
+.itemshow h2 {
+  color: #000;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+}
 
+.itemshow-wrapper {
+  display: flex;
+  width: 80%;
+}
+
+.itemshow-info {
+  margin-left: 30px;
+}
+
+.itemshow-img {
+  height: 50vh;
+  margin-bottom: 40px;
+  width: auto;
 }

@@ -47,8 +47,13 @@ class UploadItem extends React.Component {
     const { title, description } = this.state.formData
     return (
       <Container className="upload-form-wrapper">
-
+        <h2>Upload an Item!</h2>
         <Form onSubmit={ this.handleSubmit }>
+
+          <ImageUpload 
+            onChange={this.handleImageChange}
+          />
+
           <Form.Group controlId="formTitle">
             <Form.Label>Title</Form.Label>
             <Form.Control 
@@ -62,7 +67,8 @@ class UploadItem extends React.Component {
 
           <Form.Group controlId="formDescription">
             <Form.Label>Description</Form.Label>
-            <Form.Control 
+            <Form.Control
+              as="textarea" rows={8}
               type="description" 
               name="description"
               placeholder="Enter description" 
@@ -71,10 +77,6 @@ class UploadItem extends React.Component {
             />
           </Form.Group>
 
-          <ImageUpload 
-            onChange={this.handleImageChange}
-          />
-        
           <Button className="upload-btn" variant="primary" type="submit">
             Submit
           </Button>
