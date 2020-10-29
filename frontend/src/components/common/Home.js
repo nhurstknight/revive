@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Jumbotron fluid className="about"> 
-        <h1>Using Revive is simple</h1>
+        <h1>Using Revive is as easy as 123...</h1>
         <Container fluid className="about-media-wrapper">
           <Row>
             <Col xs={12} md={4}>
