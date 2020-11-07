@@ -1,0 +1,187 @@
+$theme-color1: #377D30;
+$theme-color2: #BFD9C1;
+$theme-color3: #FEF851;
+$theme-color4: #F5F5F5;
+$theme-colors: (
+    "primary": #FEF851,
+);
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+
+* {
+  font-family: 'Jost', sans-serif;
+}
+
+h1, h2,  h3 {
+  text-transform: uppercase;
+  font-weight: 700px;
+}
+
+h2, h3 {
+  color: $theme-color4;
+}
+
+// Common
+.navbar-brand {
+  font-family: 'Staatliches', cursive;
+}
+
+.navbar.navbar.navbar-expand-lg {
+  background-color: $theme-color1;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: $theme-color4;
+}
+
+.about {
+  background-color: $theme-color4;
+  height: 100vh;
+  margin-bottom: 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-btn-div .btn{
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 15px auto;
+}
+
+.footer {
+  background-color: $theme-color1;
+  height: 20vh;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+.footer ul {
+  color: $theme-color4;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//  Forms
+form {
+  margin-top: 30px;
+}
+
+.reg-form-wrapper,
+.login-form-wrapper,
+.upload-form-wrapper,
+.message-form {
+  margin: 50px auto;
+  width: 50%;
+  padding: 40px;
+  background-color: $theme-color1;
+  border-radius: 10px;
+}
+
+.form-label {
+  color: #fff;
+}
+
+.upload-thumbnail {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+.upload-btn.btn.btn-primary {
+  display: block;
+  margin-top: 20px;
+}
+
+// ItemsIndex / ItemsCard
+.itemcard-wrapper {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 4em;
+  margin-bottom: 30px;
+}
+
+.itemcard {
+  text-align: center;
+  margin: 4px;
+  box-sizing: content-box;
+}
+
+.itemcard-btn {
+  border-radius: 0;
+}
+
+.card-header {
+  color: $theme-color4;
+  background-color: $theme-color1;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.2em;
+}
+
+.card-footer {
+  background-color: $theme-color1;
+  color: #fff;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0
+}
+
+.itemcard-img {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+// ItemsShow
+.itemshow {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.itemshow-title {
+  text-align: center;
+  margin: 20px auto;
+}
+.itemshow h2 {
+  color: #000;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+}
+
+.itemshow-wrapper {
+  display: flex;
+  width: 80%;
+}
+
+.itemshow-info {
+  margin-left: 30px;
+}
+
+.itemshow-img {
+  height: 50vh;
+  margin-bottom: 40px;
+  width: auto;
+}
