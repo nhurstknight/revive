@@ -157,7 +157,7 @@ This was a challenging project for me as I wanted to really understand how the b
 
 ## Future features
 I spent a significant chunk of time working on the back-end and I would like to continue to build out the front-end utilising some of the features such as:
-- User profile page:
+- User profile:
   - User profile image
   - View my posts
   - View my messages
