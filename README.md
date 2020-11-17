@@ -1,5 +1,7 @@
 # SEI-project-4 - Revive
+
 Insert deployed project link here
+![Website screenshot](/assets/post-index.png)
 
 ## Brief
 The brief was to build a full stack application, it was a solo project and I had 9 days to plan and build this application.
@@ -49,6 +51,7 @@ Once this was complete and I had signed off my plan with my course instructors, 
 ## Wins & Challenges
 ### Wins
 I was pleased that I was able to implement Cloudinary, a media management service for image uploads which could be used on the front end forms such as users uploading a new item post. 
+![screenshot of upload item page on Revive](/assets/send-message.png)
 ```js, xml
 import React from 'react'
 import { Container,Form, Button } from 'react-bootstrap'
