@@ -1,7 +1,10 @@
 # SEI-project-4 - Revive
 
 Insert deployed project link here
+
 ![Website screenshot](/assets/post-index.png)
+
+![Website screenshot](/assets/item-show.png)
 
 ## Brief
 The brief was to build a full stack application, it was a solo project and I had 9 days to plan and build this application.
