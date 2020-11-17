@@ -11,22 +11,11 @@ The technical requirements for this project were as follows:
 - Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
 - Be deployed online
 
-## Technologies
-- React
-- JavaScript
-- Python
-- Django
-- PostgreSQL
-- Tableplus
-- React-bootstrap
-- Sass
-- Axios
-- React-router-dom
-- Insomnia
-- Cloudinary
-- Git 
-- GitHub
-- npm
+## Technologies & Tools
+
+**Tech:** React, JavaScript, Python, Django, PostgresQL, Sass, React-Bootstrap, Axios, React-router-dom, Cloudinary
+
+**Tools:** VSCode,Eslint, Git & GitHub, npm, Tableplus, Insomnia
 
 ## Overview 
 Revive is a site that allows members to list unwanted items, members can view listings and send messages to the owner on the app if they are interested in the item. 
@@ -60,7 +49,7 @@ Once this was complete and I had signed off my plan with my course instructors, 
 ## Wins & Challenges
 ### Wins
 I was pleased that I was able to implement Cloudinary, a media management service for image uploads on the items and build this into m front-end form. 
-```
+```js, xml
 import React from 'react'
 import { Container,Form, Button } from 'react-bootstrap'
 import ImageUpload from './ImageUpload'
@@ -162,7 +151,7 @@ I spent a significant chunk of time working on the back-end and I would like to 
   - View my posts
   - View my messages
   - Delete an item
-- Improve the front-end UI by adding features such as modals
+- Improve the front-end UI by adding features such as modals.
 
 I would also like to add features such as:
 - User ratings/feedback.
