@@ -2,8 +2,6 @@
 
 Insert deployed project link here
 
-![Website screenshot](/assets/post-index.png)
-
 ## Brief
 The brief was to build a full stack application, it was a solo project and I had 9 days to plan and build this application.
 
@@ -22,6 +20,8 @@ The technical requirements for this project were as follows:
 
 ## Overview 
 Revive is a site that allows members to list unwanted items, members can view listings and send messages to the owner on the app if they are interested in the item. 
+
+![Website screenshot](/assets/post-index.png)
 
 ### Functionality
 - Users can register/login
