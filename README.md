@@ -33,7 +33,7 @@ I spent some time planning how to build the application. As this was a solo proj
 - Planning the technical build by breaking down large tasks into smaller chunks. 
 - Creating a ERD to visualise the relationships between the tables on my back-end.
 
-[image:815492A3-3F65-4FC7-A039-B50A0B5A1513-56756-0000E20675EE8A93/Screenshot 2020-11-17 at 12.27.11.png]
+![ERD image](/assets/erd-image.png)
 
 Once this was complete and I had signed off my plan with my course instructors, I moved onto the first step and began to build my application focusing on the back-end.
 
