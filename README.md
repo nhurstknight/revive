@@ -48,7 +48,7 @@ Once this was complete and I had signed off my plan with my course instructors, 
 
 ## Wins & Challenges
 ### Wins
-I was pleased that I was able to implement Cloudinary, a media management service for image uploads on the items and build this into m front-end form. 
+I was pleased that I was able to implement Cloudinary, a media management service for image uploads which could be used on the front end forms such as users uploading a new item post. 
 ```js, xml
 import React from 'react'
 import { Container,Form, Button } from 'react-bootstrap'
