@@ -3,10 +3,10 @@
 Insert deployed project link here
 
 ## Brief
-The brief was to build a full stack application, it was a solo project and I had 9 days to plan and build this application.
+The brief was to build a full-stack application, it was a solo project and I had 9 days to plan and build this application.
 
 The technical requirements for this project were as follows:
-- Build a full-stack application by making your own backend and your own front-end
+- Build a full-stack application by making your own back-end and your own front-end
 - Use a Python Django API using Django REST Framework to serve your data from a Postgres database
 - Consume your API with a separate front-end built with React
 - Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
@@ -16,7 +16,7 @@ The technical requirements for this project were as follows:
 
 **Tech:** React, JavaScript, Python, Django, PostgresQL, Sass, React-Bootstrap, Axios, React-router-dom, Cloudinary
 
-**Tools:** VSCode,Eslint, Git & GitHub, npm, Tableplus, Insomnia
+**Tools:** VSCode, Eslint, Git & GitHub, npm, Tableplus, Insomnia
 
 ## Overview 
 Revive is a site that allows members to list unwanted items, members can view listings and send messages to the owner on the app if they are interested in the item. 
@@ -24,14 +24,14 @@ Revive is a site that allows members to list unwanted items, members can view li
 ![Website screenshot](/assets/post-index.png)
 
 ### Functionality
-- Users can register/login
-- Upload new items to the site
-- View all posts on the Index page
-- View post details on the show page
-- Send a message to the 
+- Users can register/login.
+- Upload new items to the site.
+- View all posts on the Index page.
+- View post details on the show page.
+- Send a message to users.
 
 ## Process
-I spent some time planning how to build the application. As this was a solo project I was comfortable doing this process on paper as it allows me to quickly visualise my ideas and evolve my plans. My planning steps included:
+I spent some time planning how to build the application. As this was a solo project I was comfortable doing this process on paper as it allowed me to quickly visualise my ideas and evolve my plans. My planning steps included:
 - Creating wireframes for the user journey.
 - Planning the technical build by breaking down large tasks into smaller chunks. 
 - Creating a ERD to visualise the relationships between the tables on my back-end.
@@ -41,17 +41,17 @@ I spent some time planning how to build the application. As this was a solo proj
 Once this was complete and I had signed off my plan with my course instructors, I moved onto the first step and began to build my application focusing on the back-end.
 
 1. I started this by writing the code for the user and item models and views.
-2. I wrote the code fo the auth which included token authentication, a user model and views that allow users to register or login.
+2. I wrote the code for the auth which included token authentication, a user model and views that allow users to register or login.
 3. My next step was to work on the code for messaging. Initially I had planned that users would be able to generate a thread based on the item and within this have a two-way communication with the item owner. I did however need to change my plan so that I could achieve an MVP product. 
-4. Once I was comfortable with the backend functionality, I moved onto setting up the front-end which involved:
+4. Once I was comfortable with the back-end functionality, I moved onto setting up the front-end which involved:
 	- Building login/register form components that api requests to the back-end database.
-	- Building ItemIndex, ItemCard and ItemShow components
-	- Creating an UploadItem form which utilised Cloudinary
-	- Message forms that are linked to the individual items
+	- Building ItemIndex, ItemCard and ItemShow components.
+	- Creating an UploadItem form which utilised Cloudinary.
+	- Message forms that are linked to the individual items.
 
 ## Wins & Challenges
 ### Wins
-I was pleased that I was able to implement Cloudinary, a media management service for image uploads which could be used on the front end forms such as users uploading a new item post. 
+I was pleased that I was able to implement Cloudinary, a media management service for image uploads which could be used on the front-end forms such as users uploading a new item post. 
 ![screenshot of upload item page on Revive](/assets/send-message.png)
 ```js, xml
 import React from 'react'
@@ -151,10 +151,10 @@ This was a challenging project for me as I wanted to really understand how the b
 ## Future features
 I spent a significant chunk of time working on the back-end and I would like to continue to build out the front-end utilising some of the features such as:
 - User profile:
-  - User profile image
-  - View my posts
-  - View my messages
-  - Delete an item
+  - User profile image.
+  - View my posts.
+  - View my messages.
+  - Delete an item.
 - Improve the front-end UI by adding features such as modals.
 
 I would also like to add features such as:
