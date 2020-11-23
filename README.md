@@ -160,6 +160,11 @@ I spent a significant chunk of time working on the back-end and I would like to 
 I would also like to add features such as:
 - User ratings/feedback.
 - Archive an item once gifted.
-- Extend the messaging function to incorporate threads and  two-way communication between users.
+- Extend the messaging function to incorporate threads and two-way communication between users.
 - Implement user locations with Mapbox.
 - Extend image upload functionality to allow multiple images on an item.
+
+## Key Learnings
+- How to structure data using a relational database.
+- Using a Django Rest Framework and serializers to convert model data to JSON.
+- Using a Model-Template-View framework to structure my codebase on the back-end.
