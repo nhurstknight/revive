@@ -31,7 +31,7 @@ Revive is a site that allows members to list unwanted items, members can view li
 - Send a message to users.
 
 ## Process
-I spent some time planning how to build the application. As this was a solo project I was comfortable doing this process on paper as it allowed me to quickly visualise my ideas and evolve my plans. My planning steps included:
+I spent some time planning how to build the application. As this was a solo project, I was comfortable doing this process on paper as it allowed me to quickly visualise my ideas and evolve my plans. My planning steps included:
 - Creating wireframes for the user journey.
 - Planning the technical build by breaking down large tasks into smaller chunks. 
 - Creating a ERD to visualise the relationships between the tables on my back-end.
