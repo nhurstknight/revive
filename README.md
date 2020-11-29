@@ -1,6 +1,6 @@
 # SEI-project-4 - Revive
 
-Insert deployed project link here
+The deployed application can be found [here](https://sei-project-4-revive.herokuapp.com/).
 
 ## Brief
 The brief was to build a full-stack application, it was a solo project and I had 9 days to plan and build this application.
